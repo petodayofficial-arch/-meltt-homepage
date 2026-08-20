@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "MELTT 홈페이지 미리보기",
+      "type": "msedge",
+      "request": "launch",
+      "url": "http://127.0.0.1:4173",
+      "webRoot": "${workspaceFolder}",
+      "preLaunchTask": "MELTT: 미리보기 서버"
+    }
+  ]
+}
