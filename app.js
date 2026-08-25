@@ -77,16 +77,6 @@ if ('IntersectionObserver' in window) {
   revealElements.forEach((el) => el.classList.add('visible'));
 }
 
-const toast = document.querySelector('.toast');
-let toastTimer;
-document.querySelectorAll('[data-add]').forEach((button) => {
-  button.addEventListener('click', () => {
-    toast.classList.add('show');
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => toast.classList.remove('show'), 2400);
-  });
-});
-
 const header = document.querySelector('.site-header');
 const menuButton = document.querySelector('.menu-button');
 const headerPlaceholder = document.createElement('div');
