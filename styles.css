@@ -3024,6 +3024,104 @@ footer,
 }
 
 /* Final ritual alignment — shared image, caption and finish baselines. */
+/* Effect section — reference-led editorial information architecture. */
+@media (min-width: 801px) {
+  .effect-overview {
+    grid-template-columns: minmax(0, 1.06fr) minmax(480px, .94fr);
+    gap: clamp(54px, 6.2vw, 108px);
+  }
+
+  .effect-content {
+    align-self: center;
+  }
+
+  .effect-content .section-label {
+    margin-bottom: 32px;
+  }
+
+  .effect-intro {
+    display: grid;
+    grid-template-columns: minmax(270px, 1.18fr) minmax(190px, .82fr);
+    gap: clamp(28px, 3vw, 54px);
+    align-items: end;
+    margin-bottom: 38px;
+  }
+
+  .effect-intro h2,
+  .effect-intro .effect-lede {
+    margin: 0;
+  }
+
+  .effect-intro h2 {
+    font-size: clamp(36px, 3vw, 48px);
+    line-height: 1.12;
+    letter-spacing: -.045em;
+  }
+
+  .effect-intro .effect-lede {
+    padding-bottom: 5px;
+    font-size: 13px;
+    line-height: 1.75;
+  }
+
+  .effect-overview .effect-list {
+    display: grid;
+    gap: 12px;
+    border: 0;
+  }
+
+  .effect-overview .effect-list article {
+    display: grid;
+    grid-template-columns: 38px minmax(128px, .72fr) minmax(220px, 1.28fr);
+    gap: 18px;
+    align-items: center;
+    min-height: 88px;
+    padding: 20px 22px;
+    border: 1px solid rgba(255, 232, 166, .24);
+  }
+
+  .effect-overview .effect-list h3,
+  .effect-overview .effect-list p {
+    margin: 0;
+  }
+
+  .effect-overview .effect-list h3 {
+    font-size: 16px;
+    line-height: 1.35;
+  }
+
+  .effect-overview .effect-list p {
+    font-size: 12px;
+    line-height: 1.65;
+  }
+}
+
+@media (max-width: 800px) {
+  .effect-intro {
+    display: grid;
+    gap: 18px;
+    margin-bottom: 30px;
+  }
+
+  .effect-overview .effect-list {
+    display: grid;
+    gap: 10px;
+    border: 0;
+  }
+
+  .effect-overview .effect-list article {
+    grid-template-columns: 30px 1fr;
+    gap: 6px 12px;
+    padding: 18px;
+    border: 1px solid rgba(255, 232, 166, .24);
+  }
+
+  .effect-overview .effect-list article > p {
+    grid-column: 2;
+    margin: 0;
+  }
+}
+
 @media (min-width: 801px) {
   .capsule-ritual .steps {
     align-items: start;
