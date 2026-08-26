@@ -3689,9 +3689,9 @@ footer,
   }
 
   .origin-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    align-content: start;
     padding: 116px var(--page-gutter) 38px;
   }
 
@@ -3717,8 +3717,12 @@ footer,
     grid-template-columns: repeat(3, 1fr);
     gap: 12px;
     width: min(1120px, 82vw);
-    margin: 70px auto 0 0;
+    margin: 80px auto 0 0;
     border: 0;
+  }
+
+  .origin-disclaimer {
+    margin: 56px 0 0;
   }
 
   .origin-fact,
