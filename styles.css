@@ -3022,3 +3022,63 @@ footer,
     gap: 28px;
   }
 }
+
+/* Final ritual alignment — shared image, caption and finish baselines. */
+@media (min-width: 801px) {
+  .capsule-ritual .steps {
+    align-items: start;
+  }
+
+  .capsule-ritual .step {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    align-content: start;
+    min-width: 0;
+  }
+
+  .capsule-ritual .step:nth-child(2) {
+    transform: none;
+  }
+
+  .capsule-ritual .step-art {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+  }
+
+  .capsule-ritual .step small {
+    margin-top: 20px;
+  }
+
+  .capsule-ritual .step h3 {
+    min-height: 28px;
+  }
+
+  .capsule-ritual .step p {
+    margin: 6px 0 0;
+    line-height: 1.6;
+  }
+
+  .ritual-finish {
+    grid-template-columns: minmax(150px, .55fr) minmax(0, 2.45fr);
+    gap: clamp(48px, 7vw, 120px);
+  }
+
+  .ritual-finish p {
+    width: 100%;
+    max-width: 920px;
+  }
+}
+
+@media (max-width: 800px) {
+  .capsule-ritual .steps {
+    align-items: stretch;
+  }
+
+  .capsule-ritual .step {
+    width: 100%;
+  }
+
+  .ritual-finish {
+    padding-top: 20px;
+  }
+}
