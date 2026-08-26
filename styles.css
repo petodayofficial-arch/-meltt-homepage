@@ -3717,7 +3717,7 @@ footer,
     grid-template-columns: repeat(3, 1fr);
     gap: 12px;
     width: min(1120px, 82vw);
-    margin: 70px 0 0 auto;
+    margin: 70px auto 0 0;
     border: 0;
   }
 
