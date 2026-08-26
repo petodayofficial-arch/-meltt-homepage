@@ -3167,6 +3167,399 @@ footer,
   }
 }
 
+/* Garden-inspired editorial reconstruction — meltt content, meltt palette. */
+@media (min-width: 801px) {
+  main > section {
+    position: relative;
+    isolation: isolate;
+  }
+
+  .product {
+    min-height: 100svh;
+    grid-template-columns: minmax(0, 1.22fr) minmax(420px, .78fr);
+    gap: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #f4eadb;
+  }
+
+  .product::before,
+  .origin::before,
+  .capsule-ritual::after,
+  .mood::before {
+    position: absolute;
+    z-index: 4;
+    top: 34px;
+    left: var(--page-gutter);
+    color: currentColor;
+    font-size: 10px;
+    font-weight: 650;
+    letter-spacing: .2em;
+    opacity: .72;
+  }
+
+  .product::before { content: "01  /  SIGNATURE OBJECT"; }
+  .origin::before { content: "02  /  FROM THE SOURCE"; color: #fff8ed; }
+  .capsule-ritual::after { content: "03  /  ONE CAPSULE RITUAL"; }
+  .mood::before { content: "04  /  DAILY SCENES"; }
+
+  .product-visual {
+    height: 100svh;
+    min-height: 760px;
+    overflow: hidden;
+  }
+
+  .product-visual > img:first-of-type {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: auto;
+    border-radius: 0;
+    object-fit: cover;
+  }
+
+  .product-detail-shot {
+    right: 34px;
+    bottom: 34px;
+    width: clamp(150px, 14vw, 230px);
+    border: 8px solid rgba(244, 234, 219, .9);
+    box-shadow: 0 20px 54px rgba(65,45,33,.18);
+  }
+
+  .product .sticker {
+    top: 36px;
+    right: 36px;
+    width: auto;
+    height: auto;
+    padding: 10px 14px;
+    border: 1px solid rgba(65,45,33,.3);
+    border-radius: 999px;
+    background: rgba(255,248,234,.78);
+    color: #412d21;
+    font-size: 9px;
+    line-height: 1.35;
+    letter-spacing: .12em;
+    box-shadow: none;
+    backdrop-filter: blur(12px);
+  }
+
+  .product-copy {
+    display: flex;
+    min-height: 100svh;
+    flex-direction: column;
+    justify-content: center;
+    padding: 110px clamp(48px, 6vw, 112px);
+  }
+
+  .product-copy h2 {
+    max-width: 540px;
+    font-size: clamp(48px, 5vw, 78px);
+    line-height: .98;
+  }
+
+  .product-copy .lede {
+    max-width: 430px;
+    margin-bottom: 44px;
+  }
+
+  .product-notes {
+    margin-top: auto;
+    border-top: 1px solid rgba(65,45,33,.3);
+  }
+
+  .product-notes p {
+    display: grid;
+    grid-template-columns: 104px 1fr;
+    gap: 22px;
+    align-items: center;
+    margin: 0;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(65,45,33,.22);
+  }
+
+  .product-notes span {
+    font-size: 9px;
+    letter-spacing: .18em;
+  }
+
+  .product-notes strong {
+    font-size: 14px;
+    font-weight: 480;
+  }
+
+  .product .benefits {
+    gap: 0;
+    margin: 28px 0 0;
+  }
+
+  .product .benefits span {
+    padding: 0 14px;
+    border: 0;
+    border-right: 1px solid rgba(65,45,33,.3);
+    border-radius: 0;
+    font-size: 10px;
+  }
+
+  .product .benefits span:first-child { padding-left: 0; }
+  .product .benefits span:last-child { border-right: 0; }
+
+  .origin-trust {
+    min-height: 100svh;
+  }
+
+  .origin-background {
+    filter: saturate(.76) contrast(.94) brightness(.9);
+    transform: scale(1.02);
+  }
+
+  .origin-overlay {
+    background: linear-gradient(180deg, rgba(40,25,17,.28), rgba(40,25,17,.48) 62%, rgba(40,25,17,.82));
+  }
+
+  .origin-content {
+    display: grid;
+    min-height: 100svh;
+    grid-template-rows: 1fr auto auto;
+    align-content: end;
+    padding: 130px var(--page-gutter) 42px;
+  }
+
+  .origin-intro {
+    align-self: center;
+    max-width: 920px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .origin-intro h2 {
+    font-size: clamp(54px, 6vw, 88px);
+    line-height: 1.02;
+  }
+
+  .origin-intro > p:last-child {
+    max-width: 620px;
+    margin-inline: auto;
+  }
+
+  .origin-facts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 70px;
+    border-top: 1px solid rgba(255,248,237,.48);
+  }
+
+  .origin-fact {
+    min-height: 168px;
+    padding: 24px 30px 20px 0;
+    border: 0;
+    border-right: 1px solid rgba(255,248,237,.24);
+  }
+
+  .origin-fact + .origin-fact { padding-left: 30px; }
+  .origin-fact:last-child { border-right: 0; }
+
+  .capsule-ritual {
+    padding-top: 150px;
+    padding-bottom: 150px;
+    background: #fffaf2;
+  }
+
+  .capsule-ritual .ritual-intro {
+    grid-template-columns: minmax(360px, 1.2fr) minmax(300px, .8fr);
+    gap: clamp(70px, 10vw, 180px);
+    align-items: end;
+    margin-bottom: 76px;
+  }
+
+  .capsule-ritual .texture-copy {
+    text-align: left;
+  }
+
+  .capsule-ritual .texture-copy h2 {
+    font-size: clamp(54px, 6vw, 86px);
+    line-height: 1;
+  }
+
+  .ritual-benefits {
+    border-top: 1px solid rgba(65,45,33,.3);
+    border-bottom: 1px solid rgba(65,45,33,.3);
+  }
+
+  .ritual-benefits article {
+    min-height: 174px;
+    padding: 28px 30px;
+    border: 0;
+    border-right: 1px solid rgba(65,45,33,.22);
+    background: transparent;
+  }
+
+  .ritual-benefits article:first-child { padding-left: 0; }
+  .ritual-benefits article:last-child { border-right: 0; }
+
+  .capsule-ritual .steps {
+    grid-template-columns: .85fr 1.3fr .85fr;
+    gap: 22px;
+    margin-top: 84px;
+    align-items: end;
+  }
+
+  .capsule-ritual .step-art {
+    height: clamp(390px, 39vw, 610px);
+    border-radius: 0;
+  }
+
+  .capsule-ritual .step:nth-child(1) .step-art,
+  .capsule-ritual .step:nth-child(3) .step-art {
+    height: clamp(330px, 32vw, 500px);
+  }
+
+  .capsule-ritual .step small {
+    margin-top: 22px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(65,45,33,.28);
+  }
+
+  .mood {
+    min-height: 100svh;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    background: #eee3d6;
+  }
+
+  .mood-title {
+    align-items: end;
+    margin-bottom: 58px;
+  }
+
+  .mood-title h2 {
+    max-width: 860px;
+    font-size: clamp(54px, 6vw, 86px);
+    line-height: 1;
+  }
+
+  .mood-grid {
+    grid-template-columns: 1.45fr .72fr .83fr;
+    gap: 10px;
+  }
+
+  .mood-grid img {
+    height: min(68vh, 720px);
+    min-height: 540px;
+  }
+
+  .mood-grid figcaption {
+    left: 20px;
+    bottom: 20px;
+    padding: 0 0 8px;
+    border-bottom: 1px solid currentColor;
+    border-radius: 0;
+    background: transparent;
+    color: #fff;
+    letter-spacing: .12em;
+    text-shadow: 0 2px 16px rgba(0,0,0,.42);
+  }
+
+  .lookbook-closing {
+    min-height: 92svh;
+    background: #412d21;
+    color: #fff8ed;
+  }
+
+  .lookbook-closing::before {
+    content: "meltt";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    color: rgba(255,248,237,.055);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: min(31vw, 520px);
+    letter-spacing: -.09em;
+    transform: translate(-52%, -54%);
+  }
+
+  .lookbook-closing .cta-orbit { display: none; }
+
+  .lookbook-closing h2 {
+    font-size: clamp(58px, 7vw, 100px);
+    line-height: 1;
+  }
+}
+
+@media (max-width: 800px) {
+  .product {
+    padding: 0;
+    gap: 0;
+    background: #f4eadb;
+  }
+
+  .product-visual {
+    height: 68svh;
+    min-height: 520px;
+  }
+
+  .product-visual > img:first-of-type {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    object-fit: cover;
+  }
+
+  .product-copy {
+    padding: 72px var(--page-gutter) 82px;
+  }
+
+  .product-notes p {
+    grid-template-columns: 88px 1fr;
+  }
+
+  .origin-content {
+    padding-top: 110px;
+  }
+
+  .origin-intro {
+    text-align: left;
+  }
+
+  .origin-facts {
+    gap: 0;
+  }
+
+  .origin-fact {
+    border: 0;
+    border-top: 1px solid rgba(255,248,237,.32);
+    border-radius: 0;
+    background: transparent;
+  }
+
+  .capsule-ritual,
+  .mood {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .ritual-benefits {
+    gap: 0;
+    border-top: 1px solid rgba(65,45,33,.28);
+  }
+
+  .ritual-benefits article {
+    border: 0;
+    border-bottom: 1px solid rgba(65,45,33,.22);
+    border-radius: 0;
+    background: transparent;
+  }
+
+  .mood {
+    background: #eee3d6;
+  }
+
+  .lookbook-closing {
+    background: #412d21;
+    color: #fff8ed;
+  }
+
+  .lookbook-closing .cta-orbit { display: none; }
+}
+
 @media (max-width: 800px) {
   .capsule-ritual .steps {
     align-items: stretch;
