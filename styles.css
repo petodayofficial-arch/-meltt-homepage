@@ -2182,6 +2182,137 @@ footer,
 }
 
 /* Responsive readability system — final mobile source of truth. */
+
+/* One-capsule value proposition — connects ingredient trust to daily use. */
+.origin-bridge {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(280px, .82fr) minmax(620px, 1.45fr);
+  align-items: start;
+  gap: clamp(56px, 8vw, 140px);
+  padding-top: clamp(82px, 8vw, 124px);
+  padding-bottom: clamp(72px, 7vw, 108px);
+  overflow: hidden;
+  border: 0;
+  background: var(--ui-yellow);
+}
+
+.origin-bridge::after {
+  content: "01";
+  position: absolute;
+  right: var(--page-gutter);
+  bottom: -32px;
+  color: rgba(74,50,37,.055);
+  font-family: var(--font-noto);
+  font-size: clamp(130px, 17vw, 280px);
+  font-weight: 700;
+  line-height: .8;
+  pointer-events: none;
+}
+
+.origin-bridge-copy .section-label {
+  margin-bottom: 24px;
+  color: var(--ui-brown);
+}
+
+.origin-bridge-title {
+  max-width: 520px;
+  margin: 0;
+  color: var(--ui-brown-dark);
+  font-size: clamp(38px, 4vw, 58px);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -.055em;
+}
+
+.origin-bridge-lede {
+  max-width: 500px;
+  margin: 28px 0 0;
+  color: rgba(65,45,33,.72);
+  font-size: 15px;
+  line-height: 1.8;
+  word-break: keep-all;
+}
+
+.origin-bridge-values {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+  padding: 0;
+  border: 0;
+}
+
+.origin-bridge-values article {
+  min-height: 270px;
+  padding: 26px clamp(20px, 2.2vw, 34px) 30px;
+  border-top: 1px solid rgba(65,45,33,.55);
+  border-left: 1px solid rgba(65,45,33,.16);
+}
+
+.origin-bridge-values article:first-child {
+  border-left: 0;
+}
+
+.origin-bridge-values span {
+  display: block;
+  margin: 0 0 72px;
+  color: var(--ui-brown);
+  font-family: var(--font-noto);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .12em;
+}
+
+.origin-bridge-values h3 {
+  margin: 0 0 14px;
+  color: var(--ui-brown-dark);
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: -.035em;
+}
+
+.origin-bridge-values p {
+  margin: 0;
+  color: rgba(65,45,33,.68);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: -.015em;
+  word-break: keep-all;
+}
+
+.origin-bridge-next {
+  position: relative;
+  z-index: 1;
+  grid-column: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: -12px 0 0;
+  padding-top: 18px;
+  border-top: 1px solid rgba(65,45,33,.2);
+  color: rgba(65,45,33,.56);
+  font-size: 12px;
+}
+
+.origin-bridge-next a {
+  display: inline-flex;
+  gap: 28px;
+  align-items: center;
+  color: var(--ui-brown-dark);
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.origin-bridge-next b {
+  font-weight: 500;
+  transition: transform .25s ease;
+}
+
+.origin-bridge-next a:hover b {
+  transform: translateY(4px);
+}
+
 @media (max-width: 800px) {
   :root {
     --page-gutter: clamp(20px, 5.5vw, 36px);
@@ -2449,14 +2580,21 @@ footer,
   }
 
   .origin-bridge {
-    gap: 32px;
-    padding-top: 48px;
-    padding-bottom: 48px;
+    grid-template-columns: 1fr;
+    gap: 42px;
+    padding-top: 72px;
+    padding-bottom: 64px;
   }
 
   .origin-bridge-title {
-    font-size: 28px;
-    line-height: 1.25;
+    font-size: var(--mobile-heading);
+    line-height: 1.14;
+  }
+
+  .origin-bridge-lede {
+    margin-top: 22px;
+    font-size: 15px;
+    line-height: 1.72;
   }
 
   .origin-bridge-values {
@@ -2464,10 +2602,35 @@ footer,
     gap: 0;
   }
 
+  .origin-bridge-values article {
+    min-height: 0;
+    padding: 22px 0 24px;
+    border-top: 1px solid rgba(65,45,33,.3);
+    border-left: 0;
+  }
+
+  .origin-bridge-values span {
+    margin-bottom: 26px;
+  }
+
+  .origin-bridge-values h3 {
+    font-size: 19px;
+  }
+
   .origin-bridge-values p {
-    padding: 13px 0;
-    border-bottom: 1px solid rgba(74,50,37,.13);
+    max-width: 470px;
     font-size: 14px;
+  }
+
+  .origin-bridge-next {
+    grid-column: 1;
+    margin-top: -18px;
+  }
+
+  .origin-bridge::after {
+    right: -18px;
+    bottom: -18px;
+    font-size: 150px;
   }
 
   .texture-copy {
